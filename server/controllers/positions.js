@@ -10,7 +10,7 @@ let positions = [{
 let id = 2
 module.exports = {
     create: (req,res) => {
-        let { positionName, sanskritName, sanskritMeaning, difficulty, duration, imageUrl } = req.body.positionName
+        let { positionName, sanskritName, sanskritMeaning, difficulty, duration, imageUrl } = req.body
         let newPosition = {
             positionName,
             sanskritName,
@@ -32,7 +32,7 @@ module.exports = {
         if(index===-1) {
             res.status(500).json("Position not found")
         } else {
-            let { positionName, sanskritName, sanskritMeaning, difficulty, duration, imageUrl } = req.body.positionName
+            let { positionName, sanskritName, sanskritMeaning, difficulty, duration, imageUrl } = req.body
             let newPosition = {
                 positionName,
                 sanskritName,

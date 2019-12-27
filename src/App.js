@@ -1,26 +1,42 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import Axios from 'axios';
+import Display from './Components/Display/Display';
+import Form from './Components/Form/Form';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  constructor() {
+    super()
+
+    this.state = {
+      positions: [],
+      form: false
+    }
+  }
+
+  componentDidMount() {
+    this.get()
+  }
+
+  get = () => {
+    Axios.get('/api/positions').then(res => this.setState({positions: res.data}))
+  }
+
+  switchForm = () => {
+    this.setState({form: !this.state.form})
+  }
+
+  render() {
+    
+    return (
+      <div className="App">
+        {/* Header Component here */}
+        {this.state.form ? <Form get={this.get} position={{}} switchForm={this.switchForm} /> : <button onClick={this.switchForm}>Add</button>}
+        {this.state.positions.map(element => <Display get={this.get} position={element} />)}
+        {/* Footer Component here */}
+      </div>
+    );
+  }
 }
 
 export default App;
