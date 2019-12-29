@@ -68,13 +68,13 @@ export default class Form extends Component {
 
     render() {
         return(
-            <section>
-                <span>Img Url: </span><input onChange={e => this.handleChange(e,"imgUrl")} value={this.state.imgUrl}/>
-                <input onChange={e => this.handleChange(e,"positionName")} value={this.state.positionName}/>
-                <input onChange={e => this.handleChange(e,"sanskritName")} value={this.state.sanskritName}/>
-                <input onChange={e => this.handleChange(e,"sanskritMeaning")} value={this.state.sanskritMeaning}/>
-                <input onChange={e => this.handleChange(e,"difficulty")} value={this.state.difficulty}/>
-                <input onChange={e => this.handleChange(e,"duration")} value={this.state.duration}/> 
+            <section className="formContainer">
+                <span className="bold">Img Url: </span><input onChange={e => this.handleChange(e,"imgUrl")} value={this.state.imgUrl}/>
+                <span className="bold">Position Name: </span><input onChange={e => this.handleChange(e,"positionName")} value={this.state.positionName}/>
+                <span className="bold">Sanskrit Name: </span><input onChange={e => this.handleChange(e,"sanskritName")} value={this.state.sanskritName}/>
+                <span className="bold">Sanskrit Meaning: </span><input onChange={e => this.handleChange(e,"sanskritMeaning")} value={this.state.sanskritMeaning}/>
+                <span className="bold">Difficulty Level: </span><input onChange={e => this.handleChange(e,"difficulty")} value={this.state.difficulty}/>
+                <span className="bold">Duration: </span><input onChange={e => this.handleChange(e,"duration")} value={this.state.duration}/> 
                 <button onClick={this.props.edit ? this.put : this.post}>Submit</button>
                 <button onClick={this.clear}>Cancel</button>            
 

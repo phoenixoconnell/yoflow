@@ -1,0 +1,12 @@
+.formContainer {
+    background-color: chartreuse;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    width: 500px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 20px;
+    font-weight: bold;
+}

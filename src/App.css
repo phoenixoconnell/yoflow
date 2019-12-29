@@ -46,3 +46,9 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+.App {
+	background-color: crimson;
+	text-align: center;
+	margin-bottom: 20px;
+}

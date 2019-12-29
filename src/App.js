@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import './App.css';
 import Display from './Components/Display/Display';
 import Form from './Components/Form/Form';
-import './App.css';
+import Header from './Components/Header/Header'
+import Footer from './Components/Footer/Footer'
 
 class App extends Component {
   constructor() {
@@ -30,10 +32,10 @@ class App extends Component {
     
     return (
       <div className="App">
-        {/* Header Component here */}
+        <Header />
         {this.state.form ? <Form get={this.get} position={{}} switchForm={this.switchForm} /> : <button onClick={this.switchForm}>Add</button>}
         {this.state.positions.map(element => <Display get={this.get} position={element} />)}
-        {/* Footer Component here */}
+        <Footer />
       </div>
     );
   }

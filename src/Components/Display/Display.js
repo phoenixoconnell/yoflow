@@ -26,15 +26,15 @@ export default class Display extends Component {
         const info = (
             <div>
                 <div>
-                    <img src={this.props.position.imgUrl} alt='Yoga Position' />
+                    <img src={this.props.position.imageUrl} alt='Yoga Position' className="image" />
                 </div>
                 <div>
-                    <h2>{this.props.position.positionName}</h2>
+                    <h2><span className="bold">{this.props.position.positionName}</span></h2>
                     <ul>
-                        <li>Sanskrit Name: {this.props.position.sanskritName}</li>
-                        <li>Sanskrit Meaning: {this.props.position.sanskritMeaning}</li>
-                        <li>Difficulty: {this.props.position.difficulty}</li>
-                        <li>Duration: {this.props.position.duration}</li>
+                        <li><span className="bold">Sanskrit Name: </span>{this.props.position.sanskritName}</li>
+                        <li><span className="bold">Sanskrit Meaning: </span>{this.props.position.sanskritMeaning}</li>
+                        <li><span className="bold">Difficulty: </span>{this.props.position.difficulty}</li>
+                        <li><span className="bold">Duration: </span>{this.props.position.duration}</li>
                     </ul>
                 </div>
                 <div>

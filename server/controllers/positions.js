@@ -1,10 +1,10 @@
 let positions = [{
     positionName: "Tree Pose",
-    sanskritName: "",
-    sanskritMeaning: "",
+    sanskritName: "Vrksasana",
+    sanskritMeaning: "Tree pose",
     difficulty: "Beginner",
-    duration: 30,
-    imageUrl: "",
+    duration: "30 seconds",
+    imageUrl: "https://marketing.gaia.com/wp-content/uploads/vrksasana-tree-pose-share-768x432.jpg",
     id: 1
 }]
 let id = 2
